@@ -20,7 +20,7 @@ if prompt := st.chat_input("اسألني أي شي!"):
     with st.chat_message("assistant"):
         chat_completion = client.chat.completions.create(
             messages=st.session_state.messages,
-            model="llama-3.3-70b-versatile",
+            model="openai/gpt-oss-120b",
         )
         response = chat_completion.choices[0].message.content
         st.markdown(response)
